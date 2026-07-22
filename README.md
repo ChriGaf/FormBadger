@@ -1,6 +1,6 @@
 # FormBadger
 
-*A simple tool for batch-filling interactive PDF forms from CSV data.*
+*FormBadger is intended to automate repetitive PDF form filling while keeping field mappings reusable and easy to edit.*
 
 ![Logo](docs/logo.jpg)
 
@@ -14,48 +14,83 @@
 
 ## Installation
 
-### Clone the repository
+**Requirements**
+
+- Python 3.13 or newer
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/ChriGaf/FormBadger.git
 cd FormBadger
 ```
 
-### Create a virtual environment
+Create and activate a virtual environment:
 
-```
-python -m venv .venv
-```
-
-### Activate the virtual environment
-
-#### Windows
+**Windows**
 
 ```bash
+python -m venv .venv
 .venv\Scripts\activate
 ```
 
-#### Linux/macOS
+**Linux/macOS**
 
 ```bash
+python -m venv .venv
 source .venv/bin/activate
 ```
 
-### Install the dependencies
+Install the runtime dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+If you want to contribute to FormBadger, install the development dependencies instead:
+
+```bash
+pip install -r requirements-dev.txt
+```
+
+## Development
+
+This project uses **Black** for code formatting.
+
+Format the source code with:
+
+```bash
+black .
+```
+
+This project uses **Ruff** for linting.
+
+Check the code:
+
+```bash
+ruff check .
+```
+
+Automatically fix issues where possible:
+
+```bash
+ruff check . --fix
+```
+
+Typical workflow before committing:
+
+```bash
+ruff check . --fix
+black .
+```
+
 ## Quick Start
 
-*More to come*
+1. Analyze a PDF template to generate a field mapping.
+2. Edit the generated CSV field mapping if necessary.
+3. Fill the template using your input CSV data.
 
 ## Examples
-
-*More to come*
-
-## Project Structure
 
 *More to come*
 
