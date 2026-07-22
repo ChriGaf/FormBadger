@@ -55,7 +55,7 @@ pip install -r requirements-dev.txt
 
 ## Development
 
-This project uses **Black** for code formatting.
+This project uses **Black** for code formatting. ✨ 🍰 ✨
 
 Format the source code with:
 
