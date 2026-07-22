@@ -4,6 +4,8 @@
 
 ![Logo](docs/logo.jpg)
 
+> **Note:** FormBadger is developed with AI assistance. All code, documentation, and design decisions are reviewed and approved by the maintainer. *(Yes, even this note. The badger insisted. 🦡🤖)*
+
 ## Features
 
 - Batch-fill interactive PDF forms
