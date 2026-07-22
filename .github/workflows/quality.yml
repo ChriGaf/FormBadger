@@ -1,4 +1,4 @@
-name: Black
+name: Quality
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  black:
+  quality:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,10 +16,13 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Install Black
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install black
+          pip install -r requirements-dev.txt
 
-      - name: Check formatting
+      - name: Check formatting with Black
         run: black --check .
+
+      - name: Lint with Ruff
+        run: ruff check .
