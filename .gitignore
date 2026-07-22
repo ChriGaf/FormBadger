@@ -1,4 +1,4 @@
-# Python
+# Byte-compiled / optimized files
 __pycache__/
 *.py[cod]
 
@@ -6,6 +6,12 @@ __pycache__/
 .venv/
 venv/
 env/
+
+# Distribution / packaging
+*.egg-info/
+.pytest_cache/
+
+# Test / coverage
 
 # IDEs
 .idea/

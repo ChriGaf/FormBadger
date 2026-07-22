@@ -1,3 +1,29 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "formbadger"
+version = "0.1.0"
+description = "Automate filling PDF forms from CSV data."
+requires-python = ">=3.13"
+dependencies = [
+    "pypdf",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "pytest",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [tool.black]
 line-length = 120
 target-version = ["py313"]

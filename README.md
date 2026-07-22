@@ -41,19 +41,21 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the runtime dependencies:
+Install FormBadger including dependencies:
 
 ```bash
-pip install -r requirements.txt
-```
-
-If you want to contribute to FormBadger, install the development dependencies instead:
-
-```bash
-pip install -r requirements-dev.txt
+pip install .
 ```
 
 ## Development
+
+If you want to contribute to FormBadger, install it in editable mode together with the development dependencies:
+
+```bash
+pip install -e ".[dev]"
+```
+
+After installing the development dependencies, the following tools are available.
 
 This project uses **Black** for code formatting. ✨ 🍰 ✨
 
@@ -77,11 +79,20 @@ Automatically fix issues where possible:
 ruff check . --fix
 ```
 
+This project uses **pytest** for unit testing.
+
+Run the test suite with:
+
+```bash
+pytest
+```
+
 Typical workflow before committing:
 
 ```bash
 ruff check . --fix
 black .
+pytest
 ```
 
 ## Quick Start
